@@ -29,17 +29,19 @@ const WelcomeScreen = (props: Props) => {
             ]}
             style={styles.background}
           >
-            <Text>Welcome Screen</Text>
-            <Link href={"/signin"} asChild>
-              <TouchableOpacity>
-                <Text>Go to SignIn Screen</Text>
-              </TouchableOpacity>
-            </Link>
-            <Link href={"/signup"} asChild>
-              <TouchableOpacity>
-                <Text>Go to SignUp Screen</Text>
-              </TouchableOpacity>
-            </Link>
+            <View style={styles.wrapper}>
+              <Text>Welcome Screen</Text>
+              <Link href={"/signin"} asChild>
+                <TouchableOpacity>
+                  <Text>Go to SignIn Screen</Text>
+                </TouchableOpacity>
+              </Link>
+              <Link href={"/signup"} asChild>
+                <TouchableOpacity>
+                  <Text>Go to SignUp Screen</Text>
+                </TouchableOpacity>
+              </Link>
+            </View>
           </LinearGradient>
         </View>
       </ImageBackground>
@@ -63,5 +65,10 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     justifyContent: "flex-end",
+  },
+  wrapper: {
+    paddingBottom: 50,
+    paddingHorizontal: 20,
+    alignItems: "center",
   },
 });
