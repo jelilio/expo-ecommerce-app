@@ -8,6 +8,7 @@ import {
 import React from "react";
 import { Link, Stack } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
+import { Colors } from "@/constants/Colors";
 
 type Props = {};
 
@@ -30,7 +31,10 @@ const WelcomeScreen = (props: Props) => {
             style={styles.background}
           >
             <View style={styles.wrapper}>
-              <Text>Welcome Screen</Text>
+              <Text style={styles.title}>ShopX</Text>
+              <Text style={styles.description}>
+                One Stop Solution for All Your Needs
+              </Text>
               <Link href={"/signin"} asChild>
                 <TouchableOpacity>
                   <Text>Go to SignIn Screen</Text>
@@ -70,5 +74,19 @@ const styles = StyleSheet.create({
     paddingBottom: 50,
     paddingHorizontal: 20,
     alignItems: "center",
+  },
+  title: {
+    fontSize: 22,
+    color: Colors.primary,
+    fontWeight: "700",
+    letterSpacing: 2.4,
+    marginBottom: 5,
+  },
+  description: {
+    fontSize: 14,
+    color: Colors.gray,
+    letterSpacing: 1.2,
+    lineHeight: 20,
+    marginBottom: 10,
   },
 });
