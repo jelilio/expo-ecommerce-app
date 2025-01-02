@@ -10,6 +10,7 @@ import { Link, Stack } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
 import { Colors } from "@/constants/Colors";
 import { Ionicons } from "@expo/vector-icons";
+import Google from "@/assets/images/google-logo.svg";
 
 type Props = {};
 
@@ -46,6 +47,26 @@ const WelcomeScreen = (props: Props) => {
                       color={Colors.black}
                     />
                     <Text style={styles.buttonTxt}>Continue with Email</Text>
+                  </TouchableOpacity>
+                </Link>
+              </View>
+              <View style={styles.socialLoginWrapper}>
+                <Link href={"/signin"} asChild>
+                  <TouchableOpacity style={styles.button}>
+                    <Google width={20} height={20} />
+                    <Text style={styles.buttonTxt}>Continue with Google</Text>
+                  </TouchableOpacity>
+                </Link>
+              </View>
+              <View style={styles.socialLoginWrapper}>
+                <Link href={"/signin"} asChild>
+                  <TouchableOpacity style={styles.button}>
+                    <Ionicons
+                      name="logo-apple"
+                      size={20}
+                      color={Colors.black}
+                    />
+                    <Text style={styles.buttonTxt}>Continue with Apple</Text>
                   </TouchableOpacity>
                 </Link>
               </View>
