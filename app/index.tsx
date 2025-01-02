@@ -70,11 +70,14 @@ const WelcomeScreen = (props: Props) => {
                   </TouchableOpacity>
                 </Link>
               </View>
-              <Link href={"/signup"} asChild>
-                <TouchableOpacity>
-                  <Text>Go to SignUp Screen</Text>
-                </TouchableOpacity>
-              </Link>
+              <View style={styles.loginTxtWrapper}>
+                <Text style={styles.loginTxt}>Already have an account? </Text>
+                <Link href={"/signin"} asChild>
+                  <TouchableOpacity>
+                    <Text style={styles.loginTxtSpan}>Sign In</Text>
+                  </TouchableOpacity>
+                </Link>
+              </View>
             </View>
           </LinearGradient>
         </View>
@@ -137,5 +140,20 @@ const styles = StyleSheet.create({
     fontSize: 14,
     fontWeight: "600",
     color: Colors.black,
+  },
+  loginTxtWrapper: {
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    marginTop: 30,
+  },
+  loginTxt: {
+    fontSize: 14,
+    color: Colors.black,
+    lineHeight: 24,
+  },
+  loginTxtSpan: {
+    color: Colors.primary,
+    fontWeight: "600",
   },
 });
