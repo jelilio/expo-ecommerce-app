@@ -39,7 +39,7 @@ const WelcomeScreen = (props: Props) => {
               </Text>
 
               <View style={styles.socialLoginWrapper}>
-                <Link href={"/signin"} asChild>
+                <Link href={"/signup"} asChild>
                   <TouchableOpacity style={styles.button}>
                     <Ionicons
                       name="mail-outline"
@@ -51,24 +51,16 @@ const WelcomeScreen = (props: Props) => {
                 </Link>
               </View>
               <View style={styles.socialLoginWrapper}>
-                <Link href={"/signin"} asChild>
-                  <TouchableOpacity style={styles.button}>
-                    <Google width={20} height={20} />
-                    <Text style={styles.buttonTxt}>Continue with Google</Text>
-                  </TouchableOpacity>
-                </Link>
+                <TouchableOpacity style={styles.button}>
+                  <Google width={20} height={20} />
+                  <Text style={styles.buttonTxt}>Continue with Google</Text>
+                </TouchableOpacity>
               </View>
               <View style={styles.socialLoginWrapper}>
-                <Link href={"/signin"} asChild>
-                  <TouchableOpacity style={styles.button}>
-                    <Ionicons
-                      name="logo-apple"
-                      size={20}
-                      color={Colors.black}
-                    />
-                    <Text style={styles.buttonTxt}>Continue with Apple</Text>
-                  </TouchableOpacity>
-                </Link>
+                <TouchableOpacity style={styles.button}>
+                  <Ionicons name="logo-apple" size={20} color={Colors.black} />
+                  <Text style={styles.buttonTxt}>Continue with Apple</Text>
+                </TouchableOpacity>
               </View>
               <View style={styles.loginTxtWrapper}>
                 <Text style={styles.loginTxt}>Already have an account? </Text>
@@ -119,8 +111,8 @@ const styles = StyleSheet.create({
     fontSize: 14,
     color: Colors.gray,
     letterSpacing: 1.2,
-    lineHeight: 20,
-    marginBottom: 10,
+    lineHeight: 30,
+    marginBottom: 20,
   },
   socialLoginWrapper: {
     alignSelf: "stretch",
