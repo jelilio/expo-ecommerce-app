@@ -9,6 +9,7 @@ import React from "react";
 import { Link, Stack } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
 import { Colors } from "@/constants/Colors";
+import { Ionicons } from "@expo/vector-icons";
 
 type Props = {};
 
@@ -35,11 +36,19 @@ const WelcomeScreen = (props: Props) => {
               <Text style={styles.description}>
                 One Stop Solution for All Your Needs
               </Text>
-              <Link href={"/signin"} asChild>
-                <TouchableOpacity>
-                  <Text>Go to SignIn Screen</Text>
-                </TouchableOpacity>
-              </Link>
+
+              <View style={styles.socialLoginWrapper}>
+                <Link href={"/signin"} asChild>
+                  <TouchableOpacity style={styles.button}>
+                    <Ionicons
+                      name="mail-outline"
+                      size={20}
+                      color={Colors.black}
+                    />
+                    <Text style={styles.buttonTxt}>Continue with Email</Text>
+                  </TouchableOpacity>
+                </Link>
+              </View>
               <Link href={"/signup"} asChild>
                 <TouchableOpacity>
                   <Text>Go to SignUp Screen</Text>
@@ -88,5 +97,24 @@ const styles = StyleSheet.create({
     letterSpacing: 1.2,
     lineHeight: 20,
     marginBottom: 10,
+  },
+  socialLoginWrapper: {
+    alignSelf: "stretch",
+  },
+  button: {
+    flexDirection: "row",
+    padding: 10,
+    color: Colors.gray,
+    borderWidth: StyleSheet.hairlineWidth,
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 5,
+    borderRadius: 25,
+    marginBottom: 15,
+  },
+  buttonTxt: {
+    fontSize: 14,
+    fontWeight: "600",
+    color: Colors.black,
   },
 });
